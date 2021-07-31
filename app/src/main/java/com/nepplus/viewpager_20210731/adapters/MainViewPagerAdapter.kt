@@ -21,4 +21,14 @@ class MainViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
             return HelloFragment()
         }
     }
+
+    override fun getPageTitle(position: Int): CharSequence? {
+        if(position === 0){
+            return "이름"
+        }else if(position === 1){
+            return "정보"
+        }else{
+            return "인사말"
+        }
+    }
 }
